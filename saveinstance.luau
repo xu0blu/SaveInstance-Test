@@ -2,7 +2,7 @@
 --!optimize 2
 --!divine-intellect
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ozdemirasrin1221/syndecompiler/refs/heads/main/Source.lua'))() -- synapse x luau decompiler
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/ozdemirasrin1221/syndecompiler/refs/heads/main/Source.lua'))() -- synapse x luau decompiler
 
 local function string_find(s, pattern)
 	return string.find(s, pattern, nil, true)
@@ -2793,7 +2793,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 											end
 										end
 
-										value = "-- Decompiled with the Synapse X Luau decompiler. \n\n"
+										value = "-- Decompiled with the Synapse X Luau decompiler. \n-- Join, https://discord.gg/CVcbpJHT6H \n"
 											.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
 											.. value
 									end
