@@ -2280,7 +2280,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			end
 		else
 			ldecompile = function()
-				return "-- failed to decompile (your executor not have a decompiler)" --Your Executor does NOT have a Decompiler
+				return "\n-- failed to decompile (your executor not have a decompiler)" --Your Executor does NOT have a Decompiler
 			end
 		end
 	end
