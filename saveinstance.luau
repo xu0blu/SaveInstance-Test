@@ -2202,7 +2202,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			local s, bytecode = getbytecode(script)
 
 			if s and bytecode and bytecode ~= "" then
-				return "-- decompiled with Bytecode (Base64)" -- "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n\n"
+				return "-- decompiled with Bytecode (Base64)" -- "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n-- Join, https://discord.gg/CVcbpJHT6H  \n"
 			end
 		end
 	end
@@ -2793,7 +2793,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 											end
 										end
 
-										value = "-- Decompiled with the Synapse X Luau decompiler. \n-- Join, https://discord.gg/CVcbpJHT6H \n"
+										value = "-- Decompiled with the Synapse X Luau decompiler. \n"
 											.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
 											.. value
 									end
