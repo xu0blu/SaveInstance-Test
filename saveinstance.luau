@@ -1646,7 +1646,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 		mode = "optimized",
 		noscripts = false,
 		scriptcache = true,
-		decomptype = "",
+		decomptype = "new",
 		timeout = 10,
 		-- * New:
 		__DEBUG_MODE = false,
@@ -2201,7 +2201,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			local s, bytecode = getbytecode(script)
 
 			if s and bytecode and bytecode ~= "" then
-				return "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n\n"
+				return "-- decompiled with Bytecode (Base64)" -- "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n\n"
 			end
 		end
 	end
