@@ -2,7 +2,7 @@
 --!optimize 2
 --!divine-intellect
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/arethesefries/syndecompiler/main/Source.lua'))() -- synapse x luau decompiler
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ozdemirasrin1221/syndecompiler/refs/heads/main/Source.lua'))() -- synapse x luau decompiler
 
 local function string_find(s, pattern)
 	return string.find(s, pattern, nil, true)
