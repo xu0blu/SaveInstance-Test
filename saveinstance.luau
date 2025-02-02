@@ -2236,7 +2236,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 
 					if s then
 						if not bytecode or bytecode == "" then
-							return "-- The Script is Empty"
+							return "-- failed to decompile"
 						end
 						hashed_bytecode = sha384(bytecode)
 						cached = ldeccache[hashed_bytecode]
@@ -2280,7 +2280,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			end
 		else
 			ldecompile = function()
-				return "-- Your Executor does NOT have a Decompiler"
+				return "-- failed to decompile (your executor not have a decompiler)" --Your Executor does NOT have a Decompiler
 			end
 		end
 	end
