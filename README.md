@@ -5,7 +5,7 @@
 
 # Loadstring
 
-```lua
+
 local Params = {
  RepoURL = "https://raw.githubusercontent.com/luau/SynSaveInstance/main/",
  SSI = "saveinstance",
@@ -13,36 +13,6 @@ local Params = {
 local synsaveinstance = loadstring(game:HttpGet(Params.RepoURL .. Params.SSI .. ".luau", true), Params.SSI)()
 local Options = {} -- Documentation here https://luau.github.io/UniversalSynSaveInstance/api/SynSaveInstance
 synsaveinstance(Options)
-```
-
-# Universal Syn Save Instance
-
-Or shortly USSI, a project aimed at resurrecting saveinstance function from [Synapse X Source 2019] & Other Executor Source leaks :trollface:.<br />
-Reason: Many Executors fail miserably at providing good user experience when it comes to tinkering with saving instances.
-
-> [!WARNING]
-> As stated under the Section 7 (b) in the LICENSE:
-> - You **MUST** always include the following Credit string: `UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw`
-> - You are **NOT** allowed to claim authorship of the source code provided in this repository
-> - You **MUST** always include the following [License](https://github.com/luau/UniversalSynSaveInstance/blob/main/LICENSE)
-
-> [!TIP]
-> Important part about this saveinstance is that it doesn't modify anything, therefore reduces the amount of detection vectors by a lot.<br />
-> You can also enable the `SafeMode` option to completely bypass any detections and save **ANY** game!<br /><br />
-> If this script is helpful to you, please click `⭐ Star` in the upper right corner of the page to support it, thank you!
-
-
-# 💖 Support Us & Our Work
-
-<a href='https://ko-fi.com/M4M1JNH5G' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' title='KO-FI' /></a>
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M1JNH5G "KO-FI")
-<br />
-[![ko-fi](https://user-images.githubusercontent.com/95628489/231759262-25661006-b7ca-4967-a79d-2b465cd9575a.png)](https://ko-fi.com/M4M1JNH5G "KO-FI QR-CODE")
-
-# DISCORD SERVER:<br />
-
-<https://discord.com/invite/wx4ThpAsmw> **/** <https://discord.gg/wx4ThpAsmw><br />
-[<img src="https://discordapp.com/api/guilds/1022465460517740654/widget.png?style=banner2" alt="Our Official Discord Server!"></img>](https://discord.com/invite/wx4ThpAsmw)<br />
 
 # TO-DOs
 
