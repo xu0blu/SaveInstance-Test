@@ -1,7 +1,8 @@
 --!native
 --!optimize 2
 --!divine-intellect
--- https://discord.gg/wx4ThpAsmw
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/arethesefries/syndecompiler/main/Source.lua'))() -- synapse x luau decompiler
 
 local function string_find(s, pattern)
 	return string.find(s, pattern, nil, true)
