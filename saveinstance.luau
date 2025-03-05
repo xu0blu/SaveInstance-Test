@@ -2281,7 +2281,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			end
 		else
 			ldecompile = function()
-				return "\n-- failed to decompile (your executor not have a decompiler)" --Your Executor does NOT have a Decompiler
+				return "\n-- failed to decompile\n" --Your Executor does NOT have a Decompiler
 			end
 		end
 	end
@@ -2773,18 +2773,15 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 											end
 										end
 
-										if should_decompile then
+										if should_decompile then --and instance.RunContext ~= Enum.RunContext.Client
 											local isLocalScript = instance:IsA("LocalScript")
 											if
 												isLocalScript and instance.RunContext == Enum.RunContext.Server
 												or not isLocalScript
 													and instance:IsA("Script")
-													and instance.RunContext ~= Enum.RunContext.Client
+													
 											then
-											value = "-- Decompiled with the Xuablu Luau decompiler. \n"
-												.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
-												.. value
-												--value = "-- [FilteringEnabled] Server Scripts are IMPOSSIBLE to save" -- TODO: Could be not just server scripts in the future
+												value = "--Reason : decompiler error?\n"
 											else
 												value = ldecompile(instance)
 												if SaveBytecode then
