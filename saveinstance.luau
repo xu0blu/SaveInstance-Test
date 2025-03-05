@@ -164,9 +164,9 @@ do -- * Load Region of Déjà Vu
 		end
 
 		-- TODO Remove later
-		if EXECUTOR_NAME == "Delta" then
-			base64encode = nil
-		end
+		--if EXECUTOR_NAME == "Delta" then
+		--	base64encode = nil
+		--end
 
 		-- Credits @Reselim
 		local reselim_base64encode
@@ -2202,7 +2202,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			local s, bytecode = getbytecode(script)
 
 			if s and bytecode and bytecode ~= "" then
-				return "-- decompiled with Bytecode (Base64)" -- "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n-- Join, https://discord.gg/CVcbpJHT6H  \n"
+				--return "-- decompiled with Bytecode (Base64)" -- "-- Bytecode (Base64):\n-- " .. base64encode(bytecode) .. "\n-- Join, https://discord.gg/CVcbpJHT6H  \n"
 			end
 		end
 	end
@@ -2781,7 +2781,10 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 													and instance:IsA("Script")
 													and instance.RunContext ~= Enum.RunContext.Client
 											then
-												value = "-- [FilteringEnabled] Server Scripts are IMPOSSIBLE to save" -- TODO: Could be not just server scripts in the future
+											value = "-- Decompiled with the Xuablu Luau decompiler. \n"
+												.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
+												.. value
+												--value = "-- [FilteringEnabled] Server Scripts are IMPOSSIBLE to save" -- TODO: Could be not just server scripts in the future
 											else
 												value = ldecompile(instance)
 												if SaveBytecode then
@@ -2796,6 +2799,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 										value = "-- Decompiled with the Xuablu Luau decompiler. \n"
 											.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
 											.. value
+										
 									end
 								end
 								value = XML_Descriptors.__PROTECTEDSTRING(value)
