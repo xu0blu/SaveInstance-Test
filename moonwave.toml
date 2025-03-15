@@ -1,4 +1,4 @@
-title = "Universal Syn SaveInstance"
+title = "Xuablu Save Instance V2"
 
 [home]
 enabled = true
@@ -10,12 +10,12 @@ tagline = "A universal saveinstance revival. This can also be edited and used as
 
 
 [[navbar.items]]
-href = "https://discord.gg/wx4ThpAsmw"
+href = "https://discord.gg/jwfpPbvUGR"
 label = "Discord"
 position = "right"
 
 [[navbar.items]]
-href = "https://ko-fi.com/M4M1JNH5G"
+href = ""
 label = "Support"
 position = "right"
 
@@ -23,7 +23,7 @@ position = "right"
 src = "favicon.png"
 
 [[footer.links]]
-href = "https://discord.gg/wx4ThpAsmw"
+href = "https://discord.gg/jwfpPbvUGR"
 label = "Discord"
 [[footer.links]]
 href = "https://ko-fi.com/M4M1JNH5G"
