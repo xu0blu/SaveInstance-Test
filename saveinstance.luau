@@ -2,8 +2,6 @@
 --!optimize 2
 --!divine-intellect
 
---loadstring(game:HttpGet('https://raw.githubusercontent.com/ozdemirasrin1221/syndecompiler/refs/heads/main/Source.lua'))() -- synapse x luau decompiler
-loadstring(game:HttpGet('https://raw.githubusercontent.com/xu0blu/decompiler-xml/refs/heads/main/script.lua'))() -- synapse x luau decompiler
 local function string_find(s, pattern)
 	return string.find(s, pattern, nil, true)
 end
@@ -43,11 +41,11 @@ do
 	)()
 
 	finder({
-		-- readbinarystring = 'string.find(...,"bin",nil,true)', -- ! Could match some unwanted stuff (getbinaryindex)
-		-- request = 'string.find(...,"request",nil,true) and not string.find(...,"internal",nil,true)',
+		readbinarystring = 'string.find(...,"bin",nil,true)', -- ! Could match some unwanted stuff (getbinaryindex)
+		request = 'string.find(...,"request",nil,true) and not string.find(...,"internal",nil,true)',
 		base64encode = 'local a={...}local b=a[1]local function c(a,b)return string.find(a,b,nil,true)end;return c(b,"encode")and(c(b,"base64")or c(string.lower(tostring(a[2])),"base64"))',
-		-- cloneref = 'string.find(...,"clone",nil,true) and string.find(...,"ref",nil,true)',
-		-- decompile = '(string.find(...,"decomp",nil,true) and string.sub(...,#...) ~= "s")',
+		cloneref = 'string.find(...,"clone",nil,true) and string.find(...,"ref",nil,true)',
+		decompile = '(string.find(...,"decomp",nil,true) and string.sub(...,#...) ~= "s")',
 		gethiddenproperty = 'string.find(...,"get",nil,true) and string.find(...,"h",nil,true) and string.find(...,"prop",nil,true) and string.sub(...,#...) ~= "s"',
 		gethui = 'string.find(...,"get",nil,true) and string.find(...,"h",nil,true) and string.find(...,"ui",nil,true)',
 		getnilinstances = 'string.find(...,"nil",nil,true) and string.find(...,"get",nil,true) and string.sub(...,#...) == "s"', -- ! Could match some unwanted stuff
